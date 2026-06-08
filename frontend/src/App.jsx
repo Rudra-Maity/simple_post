@@ -288,7 +288,7 @@ const styles = {
   pageHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 },
   pageTitle: { fontSize: '1rem', fontWeight: 600 },
   postCount: { fontSize: '0.8rem', color: '#6b7280', fontWeight: 400, marginLeft: 4 },
-  tableWrap: { background: '#fff', border: '1px solid #e4e4e0', borderRadius: 10, overflow: 'hidden' },
+  tableWrap: { background: '#fff', border: '1px solid #e4e4e0', borderRadius: 10, overflow: 'auto' },
   table: { width: '100%', borderCollapse: 'collapse' },
   th: { background: '#fafaf8', fontSize: '0.72rem', fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.06em', padding: '10px 16px', textAlign: 'left', borderBottom: '1px solid #e4e4e0' },
   tr: { borderBottom: '1px solid #e4e4e0' },
