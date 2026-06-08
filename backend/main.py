@@ -17,4 +17,4 @@ app.add_middleware(
 # Attach the modularized endpoint router
 app.include_router(posts.router)
 
-app.mount("/", StaticFiles(directory="frontend/dist", html=True))
+# app.mount("/", StaticFiles(directory="../frontend/dist", html=True), name="frontend")
