@@ -1,16 +1,27 @@
-# React + Vite
+# Full-Stack Post Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modular, scalable full-stack application built with a **Layered Architecture/MVC** design pattern on the backend using **FastAPI**, and a routed single-page interface on the frontend using **React (Vite + TailwindCSS)**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📂 Project Architecture
 
-## React Compiler
+The codebase enforces a strict separation of concerns, ensuring high maintainability and testability:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+post-management-app/
+├── backend/                  # FastAPI Application Layer
+│   ├── controllers/
+│   │   └── posts.py          # Business logic & state manipulation
+│   ├── routers/
+│   │   └── posts.py          # HTTP transport layer & endpoint mapping
+│   ├── main.py               # App initialization & CORS configurations
+│   └── requirements.txt      # Backend dependencies
+│
+├── frontend/                 # React SPA (Vite + TailwindCSS)
+│   ├── src/
+│   │   ├── components/       # Reusable presentational components (Navbar)
+│   │   ├── pages/            # View/Route-level components (Home, CreatePost)
+│   │   ├── App.jsx           # React Router client-side definition
+│   │   └── index.css         # Global styles & Tailwind directives
+│   └── package.json          # Frontend dependencies & configurations
